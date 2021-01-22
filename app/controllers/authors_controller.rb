@@ -28,7 +28,12 @@ class AuthorsController < ApplicationController
     @author.assign_attributes(author_params)
     
     if @author.valid?
-      @a
+      @author.save
+      
+      redirect_to author_path(@author)
+    else 
+      render :edit
+    end 
   end 
 
   private
