@@ -14,6 +14,10 @@ class PostsController < ApplicationController
 
     redirect_to post_path(@post)
   end
+  
+  def new 
+    @author = Author.new 
+  end 
 
   private
 
