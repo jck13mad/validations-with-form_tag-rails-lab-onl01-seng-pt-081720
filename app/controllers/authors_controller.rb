@@ -26,6 +26,9 @@ class AuthorsController < ApplicationController
   def update
     @author = Author.find(params[:id])
     @author.assign_attributes(author_params)
+    
+    if @author.valid?
+      @a
   end 
 
   private
