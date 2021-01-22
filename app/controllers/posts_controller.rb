@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end 
   
   def create 
-    @post = Post.new(params)
+    @post = Post.new(post_params)
   end 
 
   private
